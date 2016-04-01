@@ -10,10 +10,10 @@ namespace std {
 }
 #endif
 
-#include "../../oscpack_1_1_0/osc/OscReceivedElements.h"
+#include "osc/OscReceivedElements.h"
 
-#include "../../oscpack_1_1_0/ip/UdpSocket.h"
-#include "../../oscpack_1_1_0/osc/OscPacketListener.h"
+#include "ip/UdpSocket.h"
+#include "osc/OscPacketListener.h"
 
 #define PORT 5000
 #define MY_IP "127.0.0.1" //0x7F000001
@@ -59,7 +59,7 @@ namespace Muse {
         }*/ 
 	int i = 0;
 	while (arg != argsEnd) {      
-	get­­<i>(next_) =(arg++)->AsFloatUnchecked();         
+	std::get<i>(next_) =(arg++)->AsFloatUnchecked();         
 	i++;
 	}
 
